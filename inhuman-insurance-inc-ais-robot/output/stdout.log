@@ -1,0 +1,8 @@
+
+Collecting tasks from: producer.py
+======================== Running: [96mproduce_traffic_data[0m =========================
+The file 'output/traffic.json' already exists. Skipping download.
+The file 'output/test.csv' already exists. write table to csv.
+[96mproduce_traffic_data[0m status: PASS
+================================================================================
+Robocorp Log (html): c:\Users\abdul\OneDrive\Desktop\Autech\RoboCorp\inhuman-insurance-inc-ais-robot\output\log.html

@@ -1,0 +1,150 @@
+-----------------Level 2 Exam----------------------------
+
+1. What is Robocorp Assistant meant for?This question is required.
+A: Enabling the use of attended human-in-the-loop robots.
+B: Creating new robot projects from a template.
+C: Viewing documentation, enabling code auto-completion and formatting robot code in VS Code.
+D: Scheduling unattended robots in Control Room cloud containers.
+E: Configuring RDP on Windows machines.
+F: Installing Robocorp Workforce Agent on a local machine.
+
+Ans: A
+
+2. To make your code more readable, you should (choose two):This question is required.*
+Tip: Assume you have a ton of robot code and your target applications and processes use lots of industry-specific business terminology.
+A: Always write all function calls on one line.
+B: Always keep all the robot project code in a single file to avoid the need to navigate multiple files.
+C: Do not add comments as it adds to the complexity.
+D: Break long lines of code into multiple lines.
+E: Use business terminology when creating functions.
+F: Use one-letter variable names to avoid the need to read long names.
+
+Ans: D & E 
+
+3. In Python, which notation should you use to add docstrings to your functions (choose one)?This question is required.*
+Tip: Try it out.
+A: ///
+B: ###
+C: \\\
+D: ---
+E: """
+F: ***
+
+Ans: E
+
+4. When should you commit secrets into your repository (choose one)?This question is required.
+
+A: When you want to optimize the speed of your robot.
+B: When nobody is looking.
+C: When the secrets are at least 16 characters long.
+D: When you are the only developer on the project.
+E: When the repository is private.
+F: Never.
+
+Ans: F
+
+5. What is the best way to securely store secrets for your robots (choose one)?This question is required.
+A: In the conda.yaml file.
+B: In the robot.yaml file.
+C: In a __init__.py file inside the robot project folder.
+D: Inside a local vault file stored in the robot project repository.
+E: In the devdata/env.json file.
+F: Inside a Control Room vault.
+
+Ans: F
+
+6. In Python, which notation should you use if you want to ignore a line?This question is required.
+A: //
+B: ...
+C: #
+D: ***
+E: ---
+F: \#
+G: <!--
+
+Ans: C
+
+7.When using RCC, what robot creation command can you use to create a new robot from a template (choose two)?
+A: create new robot
+B: robot create
+C: rcc robot init -t <selected-template>
+D: rcc create -standard
+E: rcc new robot
+F: rcc create
+
+Ans: F and C 
+
+8. What library do you need to import to enable logging in Python?This question is required.
+A: RPA.RobotLogListener
+B: No need to import any library.
+C: RPA.Logging
+D: robocorp.log
+E: robocorp.logging
+F: RPA.Log4py
+
+Ans: B
+
+9. 
+Which libraries can be used to interact with browser-based applications (choose three)?This question is required.*
+A: RPA.Selenium
+B: RPA.WebBrowser
+C: RPA.Browser.Playwright
+D: RPA.Browser.Selenium
+E: robocorp.browser
+F: robocorp.http
+G: RPA.Chrome
+
+Ans: C,D,E
+
+10. How can you update to the latest version of the robocorp library?This question is required.*
+A: Include "https://rpaframework.org/releasenotes.html" under the "path:" section of your robot.yaml configuration file.
+B: Update the tasks.py file.
+C: rcc update rpaframework
+D: Update the Robot Framework Language Server extension.
+E: Update the conda.yaml file.
+F: Restart VS Code. It will automatically update.
+G: Update the Robocorp Code extension.
+
+Ans: E
+
+11. What are some options to target HTML elements when defining your selectors (choose three)? This question is required.
+Choose as many as you like
+A: the size of the text
+B: a class attribute
+C: a specific attribute
+D: an ever changing id value
+E: a unique id
+F: by pointing at the screen
+ 
+Ans: B, E, C
+
+12. What are some options to target HTML elements when defining your selectors (choose three)? This question is required.*
+Tip: Search the Docs.
+A: the size of the text
+B: a class attribute
+C: a specific attribute
+D: an ever changing id value
+E: a unique id
+F: by pointing at the screen
+
+Ans: B, C, E
+
+13. The default output directory can be changed by:This question is required.*
+Tip: The course mentions this.
+
+A: Editing the Control Room settings.
+B: Editing your Robocorp account profile.
+C: Editing the conda.yaml file.
+D: Editing the robot.yaml file.
+E: Editing the tasks.py file.
+
+Ans: D
+
+14. Copying someone else's robot and claiming it's made by you (choose one):This question is required.*
+Choose as many as you like
+
+A: Would hurt your learning.
+B: Would make your mother proud of you.
+C: Would be a sign of a great senior developer.
+D: Would show great pride in your profession.
+Ans: A

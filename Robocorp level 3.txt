@@ -1,0 +1,185 @@
+4. Robocorp is good at (choose all that apply)
+
+Choose as many as you like
+
+A: Robocorp can automate systems with a graphical user interface (GUI).
+B: Robocorp can automate systems with REST APIs.
+C: Robocorp can automate systems without a graphical user interface (GUI).
+
+Ans: A,B,C
+
+5. What is the name of the pattern you used to develop the sales system API robot?This question is required.*
+
+A: Director-assistant
+B: Producer-consumer
+C: Manufacturer-buyer
+D: Creator-user
+E: Manager-developer
+
+Ans: B
+
+6. The small chunks of work at the core of the pattern-that-shall-not-be-named are called:This question is required.*
+Tip: This is mentioned in the course.
+
+A: Stuffs
+B: My preciouses
+C: Work items
+D: Packages
+E: Thingies
+F: Packets
+G: Hobbitses
+
+Ans: C
+
+7. Which items are mentioned in the course and true (choose Two):This question is required.*
+
+A: Business exceptions can be distinguished from other exceptions by exception type.
+B: A business exception might be caused by, for example, invalid data.
+C: A business exception typically goes away by retrying the failing action many times.
+D: A business exception is a normal exception that is wearing formal clothing.
+
+Ans: AB
+
+8. What are Work Items for (choose all that apply:
+Choose as many as you like
+
+A: Work items can be used for measuring automation business value.
+B: Work items are useful when building error-tolerant automations.
+C: Work items enable parallel processing of work.
+D: Work items are good for tracking the flow of work through a process.
+
+Ans: ABCD
+
+9. To make your code easier to follow you should (choose the most correct answer):This question is required.*
+Tip: When the business process and the technical implementation use the same terminology, it is easier to understand and describe the automation.
+
+A: Using short one-character variable names makes your robot go super fast.
+B: Using business terms in code makes it easier to understand the connection between the robot logic and the process you are automating.
+C: The two easiest things in programming are cache invalidation and naming things.
+D: Avoiding business terminology in robot code is a best practice.
+E: Since code is technical, it is better to use just technical terms when coding instead of business terms.
+
+Ans: B
+
+10. Using robot templates to kickstart your projects (Choose 2)
+
+A: Ensures you have a working foundation to build on.
+B: Is a great idea as long as you understand what the template provides and how it works.
+C: Is only meant for beginners. Professionals never use templates, ever.
+D: Should always be avoided.
+
+Ans: AB
+
+11. How can you improve your code (choose Three)
+
+A: "Don't repeat yourself" principle is about avoiding duplication.
+B: Opportunistic refactoring means any time someone sees code that isn't as clear as it should be, they should take the opportunity to fix it right there and then.
+C: Duplicating code makes it easier to maintain your project.
+D: Placing all your robot code in a single file is always the best option, no matter how much code you have.
+E: Breaking code down into smaller pieces is a software development best practice.
+
+Ans: ABE
+
+12. Assume you are implementing a large robot and choose the most correct answer:This question is required.*
+Tip: Assume you are implementing a large robot.
+
+A: It is best to implement the full robot before testing it to catch all the issues at the same time.
+B: The conda.yaml configuration file defines the tasks of the robot.
+C: Implementing your robot in small increments and testing it often is important.
+
+Ans: C
+
+13. If you want to store files in Control Room's artifacts section, your robot should place the files:This question is required.*
+Tip: Try it out.
+
+A: Inside the devdata folder.
+B: Inside the output folder defined in the robot.yaml configuration file.
+C: On your desktop.
+D: On your external hard drive.
+E: At the root of the robot folder.
+
+Ans: B
+
+14. Which of the following apply:
+A: You can write your own libraries to transform data.
+B: The free version of Robocorp does not support data transformation.
+C: You can use Python libraries to transform data.
+D: You can use RPA Framework libraries to transform data.
+
+Ans: ACD
+
+15. What did you learn about POST requests? 
+Choose all that apply:
+A: The RPA.Request.Post library is used for making POST requests.
+B: By design, the POST request method requests that a web server accept the data enclosed in the body of the request message, most likely for storing it.
+C: As part of a POST request, an arbitrary amount of data of any type can be sent to the server in the body of the request message.
+
+Ans: BC
+
+16. The robocorp library that provides work item support is called:
+Tip: You used this library in the course.
+
+A: robocorp-json
+B: RPA.Robocorp.WorkDataManagement
+C: RPA.Robocloud.Stuffs
+D: RPA.Robo.Hobbitses
+E: robocorp-workitems
+
+Ans: E
+
+
+17. In local development
+A: Work items are stored as one CSV file, one row per work item.
+B: Work items are stored as separate CSV files, one file per work item.
+C: Work items are stored as one YAML file, one entry per work item.
+D: Work items are stored as a JSON file, one file per producer robot run.
+
+Ans:D
+
+18. According to Robocorp's Library documentation, which of the following are correct (choose all that apply):This question is required.*
+Choose as many as you like
+A: The RPA.Tables library supports writing a table into CSV.
+B: The RPA.Tables library supports filtering data.
+C: The RPA.Tables library supports sorting data.
+D: The RPA.Tables library supports grouping data.
+E: The RPA.Tables library supports finding rows that match a condition for a given column.
+F: The RPA.Tables library supports merging tables.
+
+Ans: ABCDEF
+
+19. How can you return multiple values from a function call:This question is required.*
+Tip: This is covered in the course.
+
+A: Python allows you to return multiple values separated by comma(s)
+B: Define an object containing all the data you need and return that one
+C: Return only one and guess the others
+D: Define multiple functions that have the same logic and each one will return a different value
+
+Ans: A
+
+20. When you want to mark work item as completed, you:This question is required.*
+Tip: This is covered in the course.
+
+A: Set it free.
+B: Hug it and say goodbye.
+C: Release it.
+D: Use the Mark_work_item_as_completed() function.
+E: Let it out of the door into the wilderness
+
+Ans: C
+
+21. Work items support the following exception types (choose 2)
+A: API
+B: BUSINESS
+C: SOFTWARE
+D: UI
+E: DATABASE
+F: APPLICATION
+
+Ans:BF
+
+
+
+
+
+

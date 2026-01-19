@@ -1,0 +1,80 @@
+import os
+import requests
+from robocorp import workitems
+from robocorp.tasks import task
+from RPA.HTTP import HTTP
+from Mapping_File import IDENS
+from RPA.JSON import JSON
+from RPA.Tables import Tables
+
+http = HTTP()
+json = JSON()
+table = Tables()
+
+@task
+def produce_traffic_data():
+    """
+    Inhuman Insurance, Inc. Artificial Intelligence System automation.
+    Produces traffic data work items.
+    """
+    if not os.path.exists(IDENS.TRAFFIC_JSON_FILE_PATH):
+        http.download(url= IDENS.github_url,target_file= IDENS.TRAFFIC_JSON_FILE_PATH ,overwrite=True,)
+    else:
+        print(f"The file '{IDENS.TRAFFIC_JSON_FILE_PATH}' already exists. Skipping download.")
+    
+    load_traffic_data_as_table()
+
+    traffic_data = load_traffic_data_as_table()
+
+    if not os.path.exists(IDENS.DATA_IN_TABLE_FORMAT):
+        table.write_table_to_csv(traffic_data, IDENS.DATA_IN_TABLE_FORMAT)
+    else:
+        print(f"The file '{IDENS.DATA_IN_TABLE_FORMAT}' already exists. write table to csv.")
+
+    filtered_data = filter_and_sort_traffic_data(traffic_data)
+    filtered_data = get_latest_data_by_country(filtered_data)
+    payloads = create_work_item_payloads(filtered_data)
+    save_work_item_payloads(payloads)
+
+def post_traffic_data_to_sales_system(traffic_data):
+    url = IDENS.robocorp_sales_system_api
+    response = requests.post(url, json=traffic_data)
+    return response.status_code, response.json()
+
+def load_traffic_data_as_table():
+    json_data = json.load_json_from_file(IDENS.TRAFFIC_JSON_FILE_PATH)
+    table_from_json = table.create_table(json_data["value"])
+    return table_from_json
+
+def filter_and_sort_traffic_data(data):
+    max_rate = 5.0
+    both_genders = "BTSX"
+    table.filter_table_by_column(data, IDENS.RATE_KEY, "<", max_rate)
+    table.filter_table_by_column(data, IDENS.GENDER_KEY, "==", both_genders)
+    table.sort_table_by_column(data, IDENS.YEAR_KEY, False)
+    return data
+
+def get_latest_data_by_country(data):
+    country_key = "SpatialDim"
+    data = table.group_table_by_column(data, country_key)
+    latest_data_by_country = []
+    for group in data:
+        first_row = table.pop_table_row(group)
+        latest_data_by_country.append(first_row)
+    return latest_data_by_country
+
+def create_work_item_payloads(traffic_data):
+    payloads = []
+    for row in traffic_data:
+        payload = dict(
+            country = row[IDENS.COUNTRY_KEY],
+            year = row[IDENS.YEAR_KEY],
+            rate = row[IDENS.RATE_KEY]
+            )
+        payloads.append(payload)
+    return payloads
+
+def save_work_item_payloads(payloads):
+    for payload in payloads:
+        variables = dict(traffic_data=payload)
+        workitems.outputs.create(variables)
